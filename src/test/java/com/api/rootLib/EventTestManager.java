@@ -17,15 +17,16 @@ public class EventTestManager
 	 
  }
  
- public static synchronized void endTest()
- {
-	 extent.flush();
- }
+ 
  public static synchronized ExtentTest startTest(String TestName)
  {
 	 ExtentTest test=extent.createTest(TestName);
 	 extentTestMap.put((int)(long)(Thread.currentThread().getId()), test);
 	 return test;
+ }
+ public static synchronized void endTest()
+ {
+	 extent.flush();
  }
  
 }
