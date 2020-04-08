@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14329" started-at="2020-01-31T22:24:43 IST" finished-at="2020-01-31T22:24:57 IST">
+  <suite name="Default suite" duration-ms="7592" started-at="2020-04-08T11:20:03 IST" finished-at="2020-04-08T11:20:10 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14329" started-at="2020-01-31T22:24:43 IST" finished-at="2020-01-31T22:24:57 IST">
+    <test name="Default test" duration-ms="7592" started-at="2020-04-08T11:20:03 IST" finished-at="2020-04-08T11:20:10 IST">
       <class name="com.api.testScript.FetchAllCountry">
-        <test-method status="PASS" signature="config()[pri:0, instance:com.api.testScript.FetchAllCountry@6895a785]" name="config" is-config="true" duration-ms="50" started-at="2020-01-31T22:24:43 IST" finished-at="2020-01-31T22:24:43 IST">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.api.testScript.FetchAllCountry@6895a785]" name="config" is-config="true" duration-ms="47" started-at="2020-04-08T11:20:03 IST" finished-at="2020-04-08T11:20:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="PASS" signature="getCountryDetails()[pri:0, instance:com.api.testScript.FetchAllCountry@6895a785]" name="getCountryDetails" duration-ms="14182" started-at="2020-01-31T22:24:43 IST" finished-at="2020-01-31T22:24:57 IST">
+        <test-method status="PASS" signature="getCountryDetails()[pri:0, instance:com.api.testScript.FetchAllCountry@6895a785]" name="getCountryDetails" duration-ms="7429" started-at="2020-04-08T11:20:03 IST" finished-at="2020-04-08T11:20:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCountryDetails -->

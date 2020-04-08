@@ -21,30 +21,30 @@ public class ApiConfig {
 	
 	public String getPropertiesObject(String key)
 	{
-		
-		
 		try {
 			
-			FileInputStream file=new FileInputStream("./apiList.properties");
-			pobj.load(file);
+			FileInputStream fis=new FileInputStream("./apiList.properties");
+			pobj.load(fis);
 			
-		   }catch(Exception e)
-		{
-		e.printStackTrace();	   
-		}
-		return pobj.getProperty(key);
-		
-	}//
+		   }
+		catch(Exception e)
+		  {
+		   e.printStackTrace();	   
+		  }
+		return pobj.getProperty(key);	
+	}
+	
 	
 	public Response executeRequest(String apiData)
 	{
-		String[] arr=apiData.split(";");		
+		String[] arr=apiData.split(";");
+		
 		if(arr[0].equals("get"))
 		{
-		
 				resp=given().param("userId", "7").when().get(arr[1]);	
 			
-		}else if (arr[1].equals("post"))
+		}
+		else if (arr[0].equals("post"))
 		{
 			String postObj=createJSONObject(arr[2]);
 			resp=given()
@@ -52,7 +52,8 @@ public class ApiConfig {
 					.body(postObj)
 					.when()
 					.post(arr[1]);
-		}else if (arr[1].equals("patch"))
+		}
+		else if (arr[0].equals("patch"))
 		{
 			String postObj = createJSONObject(arr[2]);
 			resp=given()
@@ -60,7 +61,8 @@ public class ApiConfig {
 					.body(postObj)
 					.when()
 					.patch(arr[1]);
-		}else if (arr[1].equals("put"))
+		}
+		else if (arr[1].equals("put"))
 		{
 			String putObj = createJSONObject(arr[2]);
 			resp=given()
@@ -69,7 +71,8 @@ public class ApiConfig {
 					.when()
 					.put(arr[1]);
 			
-		}if (arr[0].equals("delete"))
+		}
+		if (arr[0].equals("delete"))
 		{
 			resp = delete(arr[1]);
 			

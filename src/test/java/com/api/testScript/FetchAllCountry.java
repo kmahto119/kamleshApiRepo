@@ -14,6 +14,8 @@ public class FetchAllCountry extends RootClass
 		String apiData = config.getPropertiesObject("getAllCountries");
 		
 		Response resp = config.executeRequest(apiData);
+		int statusCode = resp.statusCode();
+		System.out.println(statusCode);
 		resp.then().log().all();
 	}
 

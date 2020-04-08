@@ -1,6 +1,6 @@
 package com.api.rootLib;
 
-import java.awt.Event;
+
 import java.util.Date;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -23,6 +23,8 @@ public class ExtentManager
 		return extents;
 	}
 
+	
+	/* Create an extent report */
 	private static ExtentReports createInstance() 
 	{
 		Date d=new Date();
