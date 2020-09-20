@@ -1,6 +1,7 @@
 package com.api.rootLib;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Properties;
 import static io.restassured.RestAssured.*;
 
@@ -19,19 +20,11 @@ public class ApiConfig {
 	String[] keyValue;
 	
 	
-	public String getPropertiesObject(String key)
+	public String getPropertiesObject(String key) throws Throwable
 	{
-		try {
-			
-			FileInputStream fis=new FileInputStream("./apiList.properties");
+			FileInputStream fis=new FileInputStream("./src/test/resources/apiList.properties");
 			pobj.load(fis);
-			
-		   }
-		catch(Exception e)
-		  {
-		   e.printStackTrace();	   
-		  }
-		return pobj.getProperty(key);	
+		    return pobj.getProperty(key);	
 	}
 	
 	
